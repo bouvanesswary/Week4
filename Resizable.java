@@ -21,10 +21,10 @@ public class Resizable {
 		Thread.sleep(3000);
 		WebElement frame=driver.findElementByXPath("//iframe[@class='demo-frame']");
 		driver.switchTo().frame(frame);
-		WebElement resize=driver.findElementByXPath("//div[@class='ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se']");
+		WebElement resize=driver.findElementByXPath("//div[@id='resizable']/div[3]");
 		Actions builder=new Actions(driver);
-		builder.doubleClick(resize).perform();
-		builder.dragAndDropBy(resize, 52, 62).perform();
+		builder.clickAndHold(resize).moveByOffset(97, 38).perform();
+		
 		
 	}
 
